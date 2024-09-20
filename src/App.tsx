@@ -8,7 +8,7 @@
 import React, {useEffect} from 'react';
 import SplashScreen from 'react-native-splash-screen';
 
-import {NavigationContainer, useRoute} from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {HomeScreen, Quest, QuestComplete, Welcome, Quiz} from './Screens';
@@ -30,7 +30,7 @@ const renderTabBarIcon = (focused: boolean, route: any) => {
   let iconName;
   switch (route.name) {
     case 'home':
-      iconName = focused ? homeActiveIcon : homeIcon; //todo touched version
+      iconName = focused ? homeActiveIcon : homeIcon; //todo touched version (icons is absent)
       break;
     case 'settings':
       iconName = focused ? settingsIcon : settingsIcon;
@@ -59,8 +59,6 @@ const renderTabBarIcon = (focused: boolean, route: any) => {
 };
 
 const QuizStackScreen = () => {
-  const route = useRoute();
-  console.log('route________________', route);
   return (
     <Stack.Navigator>
       <Stack.Screen

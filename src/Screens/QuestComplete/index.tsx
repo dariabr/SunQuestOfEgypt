@@ -21,7 +21,6 @@ interface QuestComplete {
 
 //TODO TYPES
 export const QuestComplete = ({navigation, route}: any) => {
-  console.log('ROUTE PARAMS', route);
   const {rightAnswerCount, score} = route.params;
 
   useEffect(() => {

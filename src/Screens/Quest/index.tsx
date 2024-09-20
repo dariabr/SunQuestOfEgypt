@@ -7,8 +7,6 @@ import {Cell} from '../../components/Cell';
 import {LetterCell} from '../../components/LetterCell';
 import styles from './styles';
 
-//type WelcomeProps = NativeStackScreenProps<LoginStackParamList, 'Welcome'>;
-
 //TODO TYPES
 export const Quest = ({navigation}: any) => {
   const allQuestions = data;
@@ -28,17 +26,12 @@ export const Quest = ({navigation}: any) => {
     setLettersArray(allQuestions[currentQuestionIndex]?.options);
   }, [allQuestions, currentQuestionIndex]);
 
-  //   console.log('____lettersArray', lettersArray);
-  //   console.log('emptyCells', emptyCells);
-
-  //   console.log('selectLetterCount', selectLetterCount);
   const onLetterPress = (letter: string, index: any) => {
     if (selectLetterCount >= 5) {
       return;
     }
 
     const lettersArrModified = lettersArray.map((el, ind) => {
-      console.log('MOD', ind, index);
       if (ind === index) {
         return '';
       }
@@ -57,9 +50,9 @@ export const Quest = ({navigation}: any) => {
         rightAnswerCount: rightAnswerCount,
       });
     }
-    const user_answer = answerLetters.join('').toLowerCase();
-    let correct_answer = allQuestions[currentQuestionIndex].correct_answer;
-    if (user_answer === correct_answer) {
+    const userAnswer = answerLetters.join('').toLowerCase();
+    let correctAnswer = allQuestions[currentQuestionIndex].correctAnswer;
+    if (userAnswer === correctAnswer) {
       setScore(score + 150);
       setRightAnswerCount(rightAnswerCount + 1);
     }
@@ -71,7 +64,7 @@ export const Quest = ({navigation}: any) => {
   };
 
   //TODO score into reducer
-  console.log('THIS');
+
   return (
     <SafeAreaView style={styles.safeAreaContainer}>
       <ScrollView>

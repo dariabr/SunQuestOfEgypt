@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, SafeAreaView, ScrollView, Text, View} from 'react-native';
 
-import {ButtonSolid, Header} from '../../components';
+import {ButtonSolid} from '../../components';
 import LinearGradient from 'react-native-linear-gradient';
 import {
   ANCIENT_EGYPT_QUEST,
@@ -48,12 +48,7 @@ export const HomeScreen = ({navigation}: any) => {
               source={game1Logo}
               onPress={() => navigation.navigate('Quest')}
             />
-            <StartButton
-              source={game2Logo}
-              onPress={() => {
-                console.log('KK');
-              }}
-            />
+            <StartButton source={game2Logo} onPress={() => {}} />
           </ScrollView>
           <ScrollView horizontal={true} contentContainerStyle={styles.row}>
             <StartButton source={game3Logo} onPress={() => {}} />

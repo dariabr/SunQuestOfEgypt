@@ -32,7 +32,7 @@ export const Quiz = ({navigation}: any) => {
     ),
   );
   const [rightAnswer, setRightAnswer] = useState<string>(
-    allQuestions[currentQuestionIndex]?.correct_option,
+    allQuestions[currentQuestionIndex]?.correctOption,
   );
 
   const [selectedOption, setSelectedOption] = useState('');
@@ -40,7 +40,7 @@ export const Quiz = ({navigation}: any) => {
   const [rightAnswerCount, setRightAnswerCount] = useState(0);
 
   useEffect(() => {
-    setRightAnswer(allQuestions[currentQuestionIndex]?.correct_option);
+    setRightAnswer(allQuestions[currentQuestionIndex]?.correctOption);
     setOptionsArray(
       allQuestions[currentQuestionIndex]?.options?.map(
         (el: string, idx: number) => ({
@@ -52,10 +52,7 @@ export const Quiz = ({navigation}: any) => {
     );
   }, [allQuestions, currentQuestionIndex]);
 
-  console.log('!!!!!!!!_____', optionsArray);
-
   const handleNext = () => {
-    //TODO navigate
     if (currentQuestionIndex === allQuestions.length - 1) {
       navigation.navigate('questComplete', {
         score: score,
@@ -63,8 +60,6 @@ export const Quiz = ({navigation}: any) => {
       });
     }
 
-    // let correct_answer = allQuestions[currentQuestionIndex].correct_answer;
-    // if (user_answer === rightAnswer) {
     if (selectedOption === rightAnswer) {
       setScore(score + 150);
       setRightAnswerCount(rightAnswerCount + 1);
@@ -75,7 +70,6 @@ export const Quiz = ({navigation}: any) => {
 
   const onOptionPress = useCallback(
     (option: OptionType) => {
-      console.log('ON OPT PRESS ');
       const updatedOptions = optionsArray?.map(opt => {
         if (opt.title === option.title) {
           return {...opt, selected: true};

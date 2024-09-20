@@ -4,26 +4,26 @@ export default data = [
     question: '1. What is the largest desert in the world by area?',
     options: ['Sahara', 'Atacama', 'Gobi', 'Antarctic desert'],
     optionsLetter: ['A', 'B', 'C', 'D'],
-    correct_option: 'Antarctic desert', //fix _ name
+    correctOption: 'Antarctic desert', //fix _ name
   },
   {
     question: '2. What is the driest desert in the world?',
     options: ['Sahara', 'Atacama', 'Gobi', 'Kalahari'],
     optionsLetter: ['A', 'B', 'C', 'D'],
-    correct_option: 'Atacama',
+    correctOption: 'Atacama',
   },
   {
     question:
       '3. In which desert is the city of Libya, one of the largest oases in the world, located?',
     options: ['Sahara', 'Atacama', 'Gobi', 'Arctic'],
     optionsLetter: ['A', 'B', 'C', 'D'],
-    correct_option: 'Sahara',
+    correctOption: 'Sahara',
   },
   {
     question: '4. Which desert is part of the historic Silk Road?',
     options: ['Sahara', 'Atacama', 'Gobi', 'Kalahari'],
     optionsLetter: ['A', 'B', 'C', 'D'],
-    correct_option: 'Gobi',
+    correctOption: 'Gobi',
   },
   {
     question:
@@ -35,14 +35,14 @@ export default data = [
       'Gobi',
     ],
     optionsLetter: ['A', 'B', 'C', 'D'],
-    correct_option: 'Great Sandy Desert',
+    correctOption: 'Great Sandy Desert',
   },
   {
     question:
       '6. Which desert is located in South America and is known for its diverse flora and fauna, including cacti and camels?',
     options: ['Atacama', 'Patagonia', 'Kalahari', 'Gobi'],
     optionsLetter: ['A', 'B', 'C', 'D'],
-    correct_option: 'Atacama',
+    correctOption: 'Atacama',
   },
   //7
   {
@@ -50,7 +50,7 @@ export default data = [
       '7. In which desert is the world`s deepest salt water body located?',
     options: ['Sahara', 'Atacama', 'Gobi', 'The Great Salt Basin'],
     optionsLetter: ['A', 'B', 'C', 'D'],
-    correct_option: 'Atacama',
+    correctOption: 'Atacama',
   },
   //8
   {
@@ -63,7 +63,7 @@ export default data = [
       'Kalahari',
     ],
     optionsLetter: ['A', 'B', 'C', 'D'],
-    correct_option: 'Great Sandy Desert',
+    correctOption: 'Great Sandy Desert',
   },
   //9
   {
@@ -71,7 +71,7 @@ export default data = [
       '9. Which desert is home to the endangered species of antelope known as the "Saharan antelope" or "Saharan gazelle"?',
     options: ['Gobi', 'Kalahari', 'Sahara', 'Atacama'],
     optionsLetter: ['A', 'B', 'C', 'D'],
-    correct_option: 'Sahara',
+    correctOption: 'Sahara',
   },
   //10
   {
@@ -84,6 +84,6 @@ export default data = [
       'Sahara',
     ],
     optionsLetter: ['A', 'B', 'C', 'D'],
-    correct_option: 'Great Sandy Desert',
+    correctOption: 'Great Sandy Desert',
   },
 ];
